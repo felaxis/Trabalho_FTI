@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class controleDeEstoqueParaFrutaria {
+
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		mensagensIniciais();
+			
+	}
+	private static void mensagensIniciais(){
+		System.out.println("                    CONTROLE DE ESTOQUE FRUTARIA DO SEU ZÉ");
+		System.out.println("---------------------------------------");
+		System.out.println("Insira a ação desejada:");
+	}
+}

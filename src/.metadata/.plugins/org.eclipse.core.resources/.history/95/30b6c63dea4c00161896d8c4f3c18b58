@@ -1,0 +1,140 @@
+import java.util.Scanner;
+
+public class Index {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		/*
+		 * Método que possua os códigos de produtos em estoque "banco de dados"
+		 * Banco de Dados irá para o método 'Inserir' e para o 'Retirar', sendo
+		 * estes colocados na main, utilizado um ou outro dependendo da ação
+		 * escolhida na tela de opções
+		 * 
+		 * Tela de opções: Inserir - Inserir o código, nome e quantidade do
+		 * produto - Char para confirmar o produto - Informar quantidade
+		 * anterior em estoque - Imprime o estoque atualizado
+		 * 
+		 * Retirar - Inserir o código, nome e quantidade do produto - Char para
+		 * confirmar o produto - Informar quantidade anterior em estoque -
+		 * Imprime o estoque atualizado
+		 * 
+		 * Encerrar
+		 */
+
+		// AINDA NÃO PUXEI OS MÉTODOS 'INSERIR' E 'RETIRAR', POIS NÃO DESENVOLVI
+		// NENHUM DELES
+		// TENTE DEBUGAR PARA ENTENDER CADA AÇÃO QUE FOI COMPLETADA ATÉ AGORA
+
+		int inserirRetirar;
+		int index = 0;
+		while (index == 0) {
+			System.out.println("CONTROLE DE ESTOQUE\n MEMES CORPORATION");
+			System.out.println("------------------------------");
+			System.out.println("Indique a ação desejada:");
+			System.out.println("------------------------------");
+			System.out.println("1 - Inserir produto no estoque");
+			System.out.println("2 - Retirar produto do estoque");
+			System.out.println("0 - Encerrar o programa");
+			int opcaoEscolhidaPeloUsuario= in.nextInt();
+
+			int inserirProdutoNoEstoque, retirarProdutoDoEstoque, estoqueAtual, estoqueNovo, quantidadeDoProduto;
+			String nomeDoProduto;
+			char confirmarAcao;
+			
+			switch (opcaoEscolhidaPeloUsuario){
+			case 1:
+				
+				
+				inserirProdutoNoEstoque = in.nextInt();
+				nomeDoProduto = in.next();
+				quantidadeDoProduto = in.nextInt();
+				System.out.println("Confirme sua ação: S ou N");
+				confirmarAcao = in.next().charAt(0);
+
+				if (confirmarAcao == 'S' || confirmarAcao == 's') {
+					System.out.println("Ação confirmada!");
+					// estoqueAntigo = -----;
+					// estoqueNovo = ----- + quantidadeDoProduto;
+					System.out.printf(
+							"A quantidade em estoque era de %d produtos\n "
+									+ "A quantidade de produtos em estoque atualmente é de %d produtos",
+							estoqueAtual, estoqueNovo);
+				} else {
+					System.out.println("Ação NÃO confirmada!");
+				}
+				// inserirProduto();
+			} else if (inserirRetirar == 2) {
+				System.out
+						.println("Digite o código, nome e a quantidade  do produto a ser retirado, respectivamente: ");
+				retirarProdutoDoEstoque = in.nextInt();
+				nomeDoProduto = in.next();
+				quantidadeDoProduto = in.nextInt();
+				System.out.println("Confirme sua ação: S ou N");
+				confirmarAcao = in.next().charAt(0);
+
+				if (confirmarAcao == 'S' || confirmarAcao == 's') {
+					System.out.println("Ação confirmada!");
+					// estoqueAntigo = ;
+					// estoqueNovo = ;
+					System.out.printf(
+							"A quantidade em estoque era de %d produtos\n "
+									+ "A quantidade de produtos em estoque atualmente é de %d produtos",
+							estoqueAtual, estoqueNovo);
+				} else {
+					System.out.println("Ação NÃO confirmada!");
+				}
+				// retirarProduto();
+			} else if (inserirRetirar == 0) {
+				break;
+			}
+			in.close();
+		}
+	}
+
+	/*
+	 * A IDEIA É DE PUXAR O MÉTODO BANCO DE DADOS PARA 'INSERIR' E PARA
+	 * 'RETIRAR', E PUXANDO CADA UM DESSES PARA A MAIN.
+	 * 
+	 * public static int inserirProduto(int inserir){
+	 * 
+	 * }
+	 * 
+	 * public static int retirarProduto(int retirar){
+	 * 
+	 * }
+	 */
+
+	// PRODUTOS NO ESTOQUE, BASE DE DADOS PARA INSERIR E RETIRAR
+	public static int bancoDeDados(int codigoDoProduto) {
+		switch (codigoDoProduto) {
+		case 1001:
+			System.out.println("ARROZ");
+			break;
+		case 1002:
+			System.out.println("FEIJÃO");
+			break;
+		case 1003:
+			System.out.println("BATATA DOCE");
+			break;
+		case 1004:
+			System.out.println("FRANGO");
+			break;
+		case 1005:
+			System.out.println("OVO");
+			break;
+		}
+		return codigoDoProduto;
+	}
+
+}
+
+	public void inserirProdutoNoEstoque(){
+		Scanner in;
+		System.out.println("Digite o código do produto: ");
+		int codigoDoProduto = in.nextInt();
+			bancoDeDados(codigoDoProduto);
+		System.out.println("PRODUTO SELECIONADO: "+codigoDoProduto+".");
+		System.out.println("Indique a quantidade a ser adicionada:");
+		int quantidadeInserida = in.nextInt();
+	}
+	}

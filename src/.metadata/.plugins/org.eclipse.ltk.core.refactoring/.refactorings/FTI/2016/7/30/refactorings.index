@@ -1,0 +1,7 @@
+1468847291316	Rename type 'controleDeEstoque'
+1468847411883	Rename local variable 'inserir'
+1468847422499	Rename local variable 'retirar'
+1468847433568	Rename local variable 'estoqueAntigo'
+1468849296383	Convert local variable 'entrada' to field
+1468849606455	Convert local variable 'entrada' to field
+1468849829043	Convert local variable 'entrada' to field

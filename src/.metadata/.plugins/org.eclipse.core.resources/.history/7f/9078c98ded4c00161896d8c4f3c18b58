@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class controleDeEstoqueParaFrutaria {
+
+	private static Scanner entrada;
+	public static void main(String[] args) {
+		Scanner entrada = new Scanner(System.in);
+		
+		mensagensIniciais();
+				
+		opcaoEscolhida();
+		
+		definirEscolhaDoUsuario(opcaoEscolhida());
+		
+			
+	}
+	
+	
+
+
+	private static void mensagensIniciais(){
+		System.out.println("                    CONTROLE DE ESTOQUE FRUTARIA DO SEU ZÉ");
+		System.out.println("-------------------------------------------------------------------------------\n");
+		System.out.println("INSIRA A AÇÃO DESEJADA:");
+		System.out.println("Para INSERIR algum item, digite 1:");
+		System.out.println("Para RETIRADA, digite 2:");	
+	}
+	
+	public static int opcaoEscolhida(){
+		entrada = null;
+		int opcaoEscolhidaPeloCliente = entrada.nextInt();
+		return opcaoEscolhidaPeloCliente;
+	}
+		public static void definirEscolhaDoUsuario(int opcaoEscolhidaPeloCliente){
+		switch (opcaoEscolhidaPeloCliente){
+		case 1:
+			inserirProdutoNoEstoque();
+			break;
+		case 2:
+			retirarProdutoDoEstoque();
+			break;
+		default:
+			System.out.println("Opcao Invalida, digite novamente a opcao desejada:");
+			
+		}
+	}
+	private static void inserirProdutoNoEstoque() {
+		System.out.println("Inserir");
+	}
+	private static void retirarProdutoDoEstoque(){
+		System.out.println("retirar");
+	}
+}
