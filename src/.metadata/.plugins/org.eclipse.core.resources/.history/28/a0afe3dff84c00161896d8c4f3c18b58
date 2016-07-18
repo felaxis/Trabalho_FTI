@@ -64,18 +64,7 @@ public class controleDeEstoqueParaFrutaria {
 			}
 		}
 	private static void retirarProdutoDoEstoque() {
-		System.out.print("Insira o Código do Produto:  ");
-		int codigoDoProduto = entrada.nextInt();
-		bancoDeDados(codigoDoProduto);
-		int quantidadeAtual = quantidadeEmBanco(codigoDoProduto);
-		System.out.println("Produto Definido: " + bancoDeDados(codigoDoProduto) + ".");
-		System.out.println("Quantidade em Estoque: " + quantidadeEmBanco(codigoDoProduto)+".");
-		System.out.print("Insira a quantidade a ser retirada: ");
-		int quantidadeRetirada = entrada.nextInt();
-		int novoTotalDeItens = quantidadeAtual - quantidadeRetirada;
-		System.out.println("CONFIRMARDO, Seu novo total é de "+novoTotalDeItens+" itens em estoque.\n");
-		System.out.println("Digite 0 para voltar ao menu princial, ou 1 para encerrar o programa.");
-		retornarAoMenuOuEncerrar();
+		System.out.println("retirar");
 	}
 
 	private static String bancoDeDados(int codigoDoProduto) {
